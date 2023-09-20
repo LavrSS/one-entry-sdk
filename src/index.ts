@@ -12,6 +12,7 @@ import MenusApi from "./menus/menusApi";
 import ModulesApi from "./modules/modulesApi";
 
 interface IDefineApi {
+    Admins:  AdminsApi
     Product: ProductApi
     Page: PageApi
     ProductStatus: ProductStatusesApi
@@ -19,7 +20,6 @@ interface IDefineApi {
     TemplatesPreview: TemplatesPreviewApi
     Markers: MarkersApi
     AttributeSet: AttributeSetApi
-    Admins:  AdminsApi
     GeneralTypes: GeneralTypesApi
     Locales: LocalesApi
     Menus: MenusApi
