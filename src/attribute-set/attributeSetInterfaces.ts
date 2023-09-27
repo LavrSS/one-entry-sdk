@@ -4,7 +4,6 @@ interface IAttributeSet {
 }
 
 
-
 export {
     IAttributeSet
 }

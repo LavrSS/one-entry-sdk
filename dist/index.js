@@ -13,6 +13,8 @@ const generalTypesApi_1 = require("./general-types/generalTypesApi");
 const localesApi_1 = require("./locales/localesApi");
 const menusApi_1 = require("./menus/menusApi");
 const modulesApi_1 = require("./modules/modulesApi");
+const formsApi_1 = require("./forms/formsApi");
+const formsDataApi_1 = require("./formsData/formsDataApi");
 /**
  * Define API.
  * @param {string} url - URl of your project.
@@ -31,19 +33,23 @@ function defineOneEntry(url) {
     const Locales = new localesApi_1.default(url);
     const Menus = new menusApi_1.default(url);
     const Modules = new modulesApi_1.default(url);
+    const Forms = new formsApi_1.default(url);
+    const FormsData = new formsDataApi_1.default(url);
     return {
-        Product,
-        Page,
-        ProductStatus,
-        Templates,
-        TemplatesPreview,
-        Markers,
-        AttributeSet,
         Admins,
+        AttributeSet,
+        Forms,
+        FormsData,
         GeneralTypes,
         Locales,
+        Markers,
+        Modules,
         Menus,
-        Modules
+        Page,
+        Product,
+        ProductStatus,
+        Templates,
+        TemplatesPreview
     };
 }
 exports.defineOneEntry = defineOneEntry;

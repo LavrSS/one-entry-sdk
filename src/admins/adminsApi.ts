@@ -1,5 +1,5 @@
 import OneEntry from "../base/oneEntry";
-import {IAdmins} from "./adminsInterfaces";
+import {IAdminEntity, IAdmins} from "./adminsInterfaces";
 
 /**
  * Controllers for working with users - admins

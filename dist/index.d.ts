@@ -10,19 +10,23 @@ import GeneralTypesApi from "./general-types/generalTypesApi";
 import LocalesApi from "./locales/localesApi";
 import MenusApi from "./menus/menusApi";
 import ModulesApi from "./modules/modulesApi";
+import FormsApi from "./forms/formsApi";
+import FormsDataApi from "./formsData/formsDataApi";
 interface IDefineApi {
-    Product: ProductApi;
+    Admins: AdminsApi;
+    AttributeSet: AttributeSetApi;
+    Forms: FormsApi;
+    FormsData: FormsDataApi;
+    GeneralTypes: GeneralTypesApi;
+    Locales: LocalesApi;
+    Markers: MarkersApi;
+    Menus: MenusApi;
+    Modules: ModulesApi;
     Page: PageApi;
+    Product: ProductApi;
     ProductStatus: ProductStatusesApi;
     Templates: TemplatesApi;
     TemplatesPreview: TemplatesPreviewApi;
-    Markers: MarkersApi;
-    AttributeSet: AttributeSetApi;
-    Admins: AdminsApi;
-    GeneralTypes: GeneralTypesApi;
-    Locales: LocalesApi;
-    Menus: MenusApi;
-    Modules: ModulesApi;
 }
 /**
  * Define API.

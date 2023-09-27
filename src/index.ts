@@ -10,20 +10,24 @@ import GeneralTypesApi from "./general-types/generalTypesApi"
 import LocalesApi from "./locales/localesApi"
 import MenusApi from "./menus/menusApi";
 import ModulesApi from "./modules/modulesApi";
+import FormsApi from "./forms/formsApi";
+import FormsDataApi from "./formsData/formsDataApi";
 
 interface IDefineApi {
     Admins:  AdminsApi
-    Product: ProductApi
+    AttributeSet: AttributeSetApi
+    Forms: FormsApi
+    FormsData: FormsDataApi
+    GeneralTypes: GeneralTypesApi
+    Locales: LocalesApi
+    Markers: MarkersApi
+    Menus: MenusApi
+    Modules: ModulesApi
     Page: PageApi
+    Product: ProductApi
     ProductStatus: ProductStatusesApi
     Templates: TemplatesApi
     TemplatesPreview: TemplatesPreviewApi
-    Markers: MarkersApi
-    AttributeSet: AttributeSetApi
-    GeneralTypes: GeneralTypesApi
-    Locales: LocalesApi
-    Menus: MenusApi
-    Modules: ModulesApi
 }
 
 /**
@@ -44,19 +48,23 @@ export function defineOneEntry(url:string):IDefineApi {
     const Locales: LocalesApi = new LocalesApi(url)
     const Menus: MenusApi = new MenusApi(url)
     const Modules: ModulesApi = new ModulesApi(url)
+    const Forms: FormsApi = new FormsApi(url)
+    const FormsData: FormsDataApi = new FormsDataApi(url)
 
     return {
-        Product,
-        Page,
-        ProductStatus,
-        Templates,
-        TemplatesPreview,
-        Markers,
-        AttributeSet,
         Admins,
+        AttributeSet,
+        Forms,
+        FormsData,
         GeneralTypes,
         Locales,
+        Markers,
+        Modules,
         Menus,
-        Modules
+        Page,
+        Product,
+        ProductStatus,
+        Templates,
+        TemplatesPreview
     }
 }

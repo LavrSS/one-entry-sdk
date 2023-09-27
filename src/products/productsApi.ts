@@ -1,6 +1,5 @@
 import {IProductsQuery, IFilterParams, IProduct, IProductApi} from './productsInterfaces'
 import OneEntry from '../base/oneEntry'
-import {defineOneEntry} from "../index";
 
 /**
  * Controllers for working with product pages
